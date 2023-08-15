@@ -13,7 +13,7 @@ repos:
     -   id: requirements-txt-fixer
     -   id: detect-private-key
 - repo: https://github.com/returntocorp/semgrep
-  rev: v1.21.0
+  rev: v1.35.0
   hooks:
     - id: semgrep
       name: semgrep
@@ -28,7 +28,7 @@ repos:
         - apache-airflow
         - apache-airflow-providers-cncf-kubernetes
 - repo: https://github.com/pycqa/autoflake
-  rev: v2.1.1
+  rev: v2.2.0
   hooks:
     - id: autoflake
       args: ["--remove-all-unused-imports", "--in-place"]
