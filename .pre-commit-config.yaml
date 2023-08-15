@@ -12,6 +12,26 @@ repos:
     -   id: name-tests-test
     -   id: requirements-txt-fixer
     -   id: detect-private-key
+- repo: https://github.com/returntocorp/semgrep
+  rev: v1.21.0
+  hooks:
+    - id: semgrep
+      name: semgrep
+      entry: semgrep
+      args: ["--config=auto", "--disable-version-check", "--skip-unknown-extensions"]
+- repo: https://github.com/feluelle/airflint
+  rev: v0.3.2-alpha
+  hooks:
+    - id: airflint
+      args: ["-a"]
+      additional_dependencies:
+        - apache-airflow
+        - apache-airflow-providers-cncf-kubernetes
+- repo: https://github.com/pycqa/autoflake
+  rev: v2.1.1
+  hooks:
+    - id: autoflake
+      args: ["--remove-all-unused-imports", "--in-place"]
 - repo: https://github.com/astral-sh/ruff-pre-commit
   rev: v0.0.284
   hooks:
