@@ -1,3 +1,17 @@
+# ======================================
+# Project
+# ======================================
+
+# Pre-commit Hooks
+.ruff_cache/
+
+# Google Cloud Key
+include/gcp/
+
+# ======================================
+# Python .gitignore
+# ======================================
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
