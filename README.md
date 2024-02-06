@@ -21,3 +21,25 @@ This project is inspired by the video: Data Engineer Project: An end-to-end Airf
 - [ ] Have a Google Cloud account
 
     You can create your account here: [Google Cloud](cloud.google.com)
+
+## Getting Started
+
+1. Run `astro dev init` to create the necessary files for your environment.
+
+2. Run `astro dev start` to start the airflow service with docker.
+
+3. Download dataset from [Kaggle - Online Retail](https://www.kaggle.com/datasets/tunguz/online-retail?resource=download)
+
+    - Create a folder `dataset` inside the `include` directory and add your CSV file there.
+
+4. Create a Google Cloud Bucket.
+
+5. Create a Service Account.
+
+    - Grant access to Cloud Storage as "Storage Admin".
+
+    - Grant access to BigQuery as "BigQuery Admin".
+
+6. Create a JSON key for the Service Account.
+
+    - Create a folder `gcp` inside the `include` directory and add your JSON key there.
