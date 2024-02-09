@@ -11,6 +11,7 @@ from airflow.providers.google.cloud.transfers.local_to_gcs import (
 )
 from astro import sql as aql
 from astro.constants import FileType
+from astro.dataframes.load_options import PandasLoadOptions
 from astro.files import File
 from astro.sql.table import Metadata
 from astro.sql.table import Table
@@ -51,6 +52,9 @@ def retail():
             metadata=Metadata(schema="retail"),
         ),
         use_native_support=False,
+        load_options=[
+            PandasLoadOptions(encoding="utf_16", kwargs={"encoding_errors": "ignore"}),
+        ],
     )
 
     # Tasks Execution Order
