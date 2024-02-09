@@ -34,6 +34,8 @@ This project is inspired by the video: Data Engineer Project: An end-to-end Airf
 
 4. Create a Google Cloud Bucket.
 
+    - Create a folder called `input`
+
 5. Create a Service Account.
 
     - Grant access to Cloud Storage as "Storage Admin".
@@ -43,3 +45,5 @@ This project is inspired by the video: Data Engineer Project: An end-to-end Airf
 6. Create a JSON key for the Service Account.
 
     - Create a folder `gcp` inside the `include` directory and add your JSON key there.
+
+7. Create a connection in the Airflow UI using the path of the JSON key.
